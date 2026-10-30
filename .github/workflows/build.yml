@@ -37,4 +37,4 @@ jobs:
 
     - name: Build APK with Flet
       run: |
-        flet build apk --verbose
+        flet build apk -- yes --verbose

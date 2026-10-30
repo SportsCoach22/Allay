@@ -38,5 +38,7 @@ jobs:
 
     - name: Build APK with Flet
       run: |
-        flutter doctor --android-licenses || true
+        mkdir -p ~/.android
+        touch ~/.android/repositories.cfg
+        yes | flutter doctor --android-licenses || true
         echo "y" | flet build apk --module-name Allay.py --verbose
